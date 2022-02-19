@@ -3,7 +3,7 @@
 <head>
     <meta charset = "utf-8">
 
-    <title>Some title</title>
+    <title>Article</title>
     <meta name="description" content="Some title">
     <meta name="author" content="SitePoint">
     <link rel="stylesheet" href="css/style.css">
@@ -29,12 +29,12 @@
                 </nav>
         </header>
     </section>
-    <section class="download_wrap">
-        <div class="download wrap">
+    <section class="first_screen_wrap">
+        <div class="first_screen wrap">
             <div class="block">
                 <div class="item">
                     <div class="picture">
-                        <img src="img/title.png" width="600" >
+                        <img class="pict" src="img/title.png" width="600" >
                     </div>
                     <div class="text">
                         <p class="pre-text">Статья</p>
@@ -47,8 +47,8 @@
     </section>
     <section class="article_wrap">
         <div class="article wrap">
-            <h3 id="a1" class="part_title">Почему это важно?</h3>
-            <div class="block">
+            <h3 id="a1" class="part_title">Почему вёрстка - это важно?</h3>
+            <div class="block white">
                 <div class="pars">
                     <div class="block_text">
                         <p>Вы можете написать интересный текст, придумать цепляющий заголовок, но если статью будет сложно читать, то вы рискуете потерять своих посетителей.
@@ -67,7 +67,7 @@
         </div>
         <div class="article wrap">
             <h3 id="a2" class="part_title">Возможности HTML и CSS</h3>
-            <div class="block">
+            <div class="block white">
                 <h4 class="h4">Стили</h4>
                 <div class="pars">
                     <div class="block_text">
@@ -90,14 +90,23 @@
                             <p>В книге <cite>Мастер и Маргарита</cite> есть такая цитата:</p>
                         <blockquote>Никогда ничего не просите! Никогда и ничего, и в особенности у тех, кто сильнее вас. Сами предложат и сами всё дадут!</blockquote>
                         <br>
-                    
+                    </div>
+                </div>
+                <h4 class = h4>Списки</h4>
+                <div class="pars">
+                    <div class="block_text">
+                        <p>
+                            Использование списков отлично решит вопрос структурирования и сжатия информации. 
+                            Список намного проще понять, пользователю не приходится парсить в голове абзац на 
+                            пункты - за него это уже сделал верстальщик. Списки также можно оформлять всевозможными способами:
+                        </p>
                     </div>
                 </div>
                 <div class="item">
                     <div class="column">
-                        <h4 class = h4>Маркированный списки</h4>
+                        <h4 class = h5>Маркированные списки</h4>
                         <div class="pars">
-                            <h5 class="h5">Маркер - окружность</h5>
+                            <h5 class="h6">Маркер - окружность</h6>
                             <div class="block_text">
                                 <ul type = "circle" class="list">
                                     <li>Первое</li>
@@ -105,7 +114,7 @@
                                     <li>Третье</li>
                                 </ul>
                             </div>
-                            <h5 class="h5">Маркер - круг</h5>
+                            <h5 class="h6">Маркер - красный круг</h6>
                             <div class="block_text">
                                 <ul image = "disc" class="list redmarkers">
                                     <li><a >Первое</a></li>
@@ -113,7 +122,7 @@
                                     <li><a >Третье</a></li>
                                 </ul>
                             </div>
-                            <h5 class=h5>Маркер - квадрат</h5>
+                            <h5 class=h6>Маркер - квадрат</h6>
                             <div class="block_text">
                                 <ul type = "square" class="list">
                                     <li><a >Первое</a></li>
@@ -124,9 +133,9 @@
                         </div>
                     </div>
                     <div class = "column">
-                        <h4 class = h4>Нумерованный список</h4>
+                        <h4 class = h5>Нумерованные списки</h4>
                         <div class="pars">
-                            <h5 class="h5">Нумерация - арабская</h5>
+                            <h5 class="h6">Нумерация - арабская</h6>
                             <div class="block_text">
                                 <ol type = "1" class="list">
                                     <li><a >Первое</a></li>
@@ -134,7 +143,7 @@
                                     <li><a >Третье</a></li>
                                 </ol>
                             </div>
-                            <h5 class="h5">Нумерация - римская</h5>
+                            <h5 class="h6">Нумерация - римская</h6>
                             <div class="block_text">
                                 <ol type = "I" class="list">
                                     <li><a >Первое</a></li>
@@ -142,7 +151,7 @@
                                     <li><a >Третье</a></li>
                                 </ol>
                             </div>
-                            <h5 class=h5>Нумерация - римская в нижнем регистре</h5>
+                            <h5 class=h6>Нумерация - римская в нижнем регистре</h6>
                             <div class="block_text">
                                 <ol type = "i" class="list">
                                     <li><a >Первое</a></li>
@@ -156,35 +165,39 @@
                 <h4 class="h4">Таблица</h4>
                 <div class="pars">
                     <div class="block_text">
-                        <table>
-                            <caption>Название таблицы</caption>
-                            <colgroup>
-                                <col span="1" style="background:rgb(140, 240, 227)">                            
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th>раздел1</th><th>раздел1</th><th>раздел1</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>данные</td><td>данные</td><td>данные</td>
-                            </tr>
-                            <tr>
-                                <td>данные</td><td>данные</td><td>данные</td>
-                            </tr>
-                            <tr>
-                                <td>данные</td><td>данные</td><td>данные</td>
-                            </tr>
-                            </tbody>
-                        </table>
+                        <p>
+                            Использование списков отлично решит вопрос структурирования и сжатия информации. 
+                            Список намного проще понять, пользователю не приходится парсить в голове абзац на 
+                            пункты - за него это уже сделал верстальщик.
                     </div>
                 </div>
+                <table>
+                    <caption>Название таблицы</caption>
+                        <colgroup>
+                            <col span="1" style="background:rgb(140, 240, 227)">                            
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>раздел1</th><th>раздел1</th><th>раздел1</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>данные</td><td>данные</td><td>данные</td>
+                        </tr>
+                        <tr>
+                            <td>данные</td><td>данные</td><td>данные</td>
+                        </tr>
+                        <tr>
+                            <td>данные</td><td>данные</td><td>данные</td>
+                        </tr>
+                        </tbody>
+                </table>
             </div>
         </div>
         <div class="article wrap">
             <h3 id="a3" class="part_title">Вывод</h3>
-            <div class="block">
+            <div class="block white">
                 <div class="pars">
                     <div class="block_text">
                         <p>Данная статья является ознакомительной, 
@@ -196,10 +209,10 @@
             </div>
         </div>
     </section>
-    <section>
+    <section class="lol">
         <section id="a4" class="form">
             <div class="container wrap">
-                <div class="form_inner wrap">
+                <div class="form_inner">
                     <div class="form_content">
                         <div class="form_title_box">
                             <div class="form_title">
@@ -257,7 +270,7 @@
     <section class="footer_wrap">
         <footer class="footer wrap">
             <a href = "#">
-                <img src="img/contacts.png" width="85" class="logo2">
+                <img src="img/contacts.png" width="45" class="logo2">
             </a>
             <p class="footer_p">
                 Copywright

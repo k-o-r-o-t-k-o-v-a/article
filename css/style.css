@@ -12,12 +12,14 @@ body{
 }
 .wrap{
     box-sizing: border-box;
-    max-width: 1200px;
+    max-width: 1200px;/*обертка всех контейнеров*/
     min-width: 320px;
     margin: 0 auto;
     padding: 0px 25px;
+    background-color: (255, 155, 247);
 }
-.header{
+.header/*,
+.header_title*/{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -25,17 +27,6 @@ body{
     box-sizing: border-box;
     max-width: 1330px;
     margin: 0 auto;
-    background-color: rgb(194, 216, 70);
-}
-.header_title{
-    display: flex;
-    align-items: center;
-    /*justify-content: space-between;*/
-    padding: 10px 15px;
-    box-sizing: border-box;
-    max-width: 1330px;
-    margin: 0 auto;
-    background-color: burlywood;
 }
 .title_name{
     display: flex;
@@ -52,18 +43,20 @@ body{
     margin-left: 54px;
 }
 .menu li a{
-    text-decoration: none; color:#3a3a3a
+    text-decoration: none; 
+    color:rgb(48, 0, 160);
+    font-size: 17px;
+    font-weight: 600;
 }
 .menu li a:hover{
      color:azure;
 }
-.download_wrap{
+.first_screen_wrap{
     background: rgb(31, 190, 156);
     padding: 75px 0 100px 0;
     
 }
-.download{
-    color:rgb(255, 214, 138);
+.first_screen{/*вдруг надо */
     /*display: flex;
     align-items: center;
     text-align: left;
@@ -79,6 +72,7 @@ body{
     width: 50%;
 }
 .text{
+    color:rgb(255, 214, 138);
     /*max-width: 600px;*/
     width: 47%;
 }
@@ -87,6 +81,7 @@ body{
     font-size: 1.5rem;
     line-height: 2rem;
     margin-bottom: 20px;
+    background-color: rgb(171, 100, 237);
 }
 .title{
     font-weight: 700;
@@ -101,13 +96,16 @@ body{
     margin-bottom: 40px;
 }
 .footer_wrap{
-    padding-top: 100px;
+    padding-top: 90px;
     padding-bottom: 15px;
+    background-color: (255, 0, 0);
 }
 .footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top:10px;
+    background-color: rgb(171, 100, 237);
 }
 .footer_p{
     color: black;
@@ -115,7 +113,8 @@ body{
     font-weight: 700;
 }
 .article_wrap{
-    padding: 50px 0;
+    padding: 50px;
+    background-color: (236, 222, 202);
 }
 .article{
     max-width: 900px;
@@ -130,21 +129,21 @@ body{
     font-size: 30px;
     font-weight: 600;
     text-align: center;
-    color:rgb(82, 161, 135);
+    color:rgb(255, 214, 138);
     margin-bottom: 20px;/*меняет отступ после заголовка*/
-    background-color: transparent;
+    background-color: rgb(171, 100, 237);
 }
 .block{
     margin-bottom: 80px;/*меняет отступ после блока*/
-    background-color: transparent(171, 100, 237);
+    /*background-color: rgb(171, 100, 237);*/
 }
 .pars{
-    margin-bottom: 50px;/*меняет отступ после параграфа в любом блоке*/
-    background-color: transparent(100, 237, 134);
+    margin-bottom: 0px;/*меняет отступ после параграфа в любом блоке*/
+    background-color: (100, 237, 134);
 }
 .block_text{
-    margin-bottom: 30px;
-    background-color: transparent(237, 235, 100);
+    margin-bottom: 30px;/*меняет отступ после каждоготекста*/
+    background-color: (237, 235, 100);
 }
 .h4{
     font-weight: 600;
@@ -168,7 +167,7 @@ td{
     border: 1px solid grey;
 }
 p{
-    margin: 0 0 10px;
+    margin: 0 0 10px;/*по сути как block_text меняет после каждого текста отступ*/
     text-indent: 25px;
     text-align: justify;
 }
@@ -176,11 +175,27 @@ p{
     border: 2px solid rgb(3, 3, 3);
     border-radius: 10px;
 }
-.form_title_box{
-    max-width: 520px;
-    padding-left: 140px;
-    position: relative;/*что делает*/
-    background-color: transparent;
+.lol{
+    background-color: (2, 2, 2);
+}
+.container{
+    background-color:(207, 151, 207);
+    padding-left: 30px;
+
+}
+.form{
+    background-color: (255, 117, 117);
+}
+.form_inner{
+    padding-top: 30px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;/*отступ серой формы внутри сверху и снизу*/
+    background-color: rgb(233, 233, 233);
+    background-image: url(../img/form.png);
+    min-height: 400px;
+    background-repeat: no-repeat;
+    background-position: bottom right;
 }
 /*.form_title_box:before{
     
@@ -193,54 +208,41 @@ p{
     top: 11px;
 }
 */
+.form_title_box{
+    max-width: 520px;
+    padding-left: 140px;
+    position: relative;/*что делает*/
+    background-color: (220, 255, 95);
+}
 .form_title{
     font-size: 24px;
     font-weight: 500;
     line-height: 24px;
     color:black;
-    
-    margin-bottom: 10px;
-    background-color: transparent;
+    margin-bottom: 20px;
+    background-color: (52, 52, 252);
 }
 .form_text{
-    background-color: transparent;
-}
-.form{
-    padding-top: 30px;
-    background-color: transparent;
-
-}
-.container{
-    background-color: transparent(0, 0, 0);
-    padding-left: 30px;
-
-}
-.form_inner{
-    padding-top: 10px;
-    background-color: rgb(233, 233, 233);
-    background-image: url(../img/form.png);
-    min-height: 400px;
-    background-repeat: no-repeat;
-    background-position: bottom right;
+    background-color: (88, 255, 73);
+    max-width: 400px;
 }
 .form_box{
     max-width: 550px;
-    padding-left: 20px;
-    background-color: transparent;
-    padding-top: 45px; 
+    background-color: (111, 146, 40);
+    padding-top: 35px; 
 }
 .form_box_inner{
     display: flex;
     justify-content: space-between;
-    background-color: transparent;
+    background-color: (141, 57, 141);
 }
 .form_box_left{
-    background-color: transparent(255, 47, 203);
+    background-color: (255, 47, 203);
     max-width: 150px;
     width: 100%;
 }
 .form_box_right{
-    background-color: transparent;
+    background-color: (196, 101, 33);
     max-width: 350px;
     width: 100%;
 }
@@ -252,14 +254,15 @@ p{
     width: 100%
 }
 .form_box_inner label{
-    line-height: 36px;
+    line-height: 22px;
     color:rgb(3, 3, 3);
-
 }
 .form_box_inner input{
-    margin-bottom: 8px;
+    margin-bottom: 9px;
+    margin-top: 3px;
     height: 35px;
     border: 1px solid #a8a6a6;
+    border-radius: 10px;
     padding: 0px 10px;
 }
 /*.form_box_inner select{
@@ -269,16 +272,19 @@ p{
 }*/
 .form_box_inner textarea{
     border: 1px solid #a8a6a6;
+    border-radius: 10px;
     padding: 10px;
     height: 180px;
     resize: none;
 }
 .form_btn{
-    background-color: rgb(255, 227, 70);
+    background-color: rgb(255, 214, 138);
     padding: 5px 10px;
-    border: 2px solid #272727;
+    border: 1px solid rgb(255, 214, 138);
     margin: 10px 0px;
     border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    color:black;
 }
 .redmarkers{
     list-style: none;
@@ -297,7 +303,12 @@ p{
     font-weight: 500;
     color:#3a3a3a;
 }
-
+.white{
+    background-color: white;
+}
+.pict{
+    border-radius: 10px;
+}
 /*.form_text{
     letter-spacing: 0.1px;
 }
